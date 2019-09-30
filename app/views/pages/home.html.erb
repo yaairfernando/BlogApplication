@@ -1,4 +1,106 @@
-<h1>Home page</h1>
+<div class="contenido-principal">
+  <div class="img-cover" id="hero">
+    <%= image_tag("cover.jpg", :alt => "hero image") %>
+  </div>
+  <div class="container">
+    <div class="row fila">
+      <div class="six columns">
+        <div class="content-hero">
+          <h2>Learn something new..</h2>
+          <p>Each article is amazing</p>
+          <form action="#" id="search" method="POST" class="">
+            <input
+              type="text"
+              class="u-full-width"
+              placeholder="What would you like to read about?"
+              id="search-bar"
+            />
+            <input type="submit" id="submit-buscador" class="submit-search" />
+            <%= link_to "Sign Up Now", "#", class: "btn btn-primary btn-large",
+            id: "sign-up"%>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="newest">
+  <div class="article">
+    <h3 class="title">Ruby and Rails</h3>
+    <%= image_tag("ruby.png", :alt => "hero image") %>
+  </div>
+  <div class="article">
+    <h3 class="title">Java Script</h3>
+    <%= image_tag("javascript.png", :alt => "hero image") %>
+  </div>
+  <div class="article">
+    <h3 class="title">.NET Framework</h3>
+    <%= image_tag("net.png", :alt => "hero image") %>
+  </div>
+</div>
 
-<%= link_to "Yair Blob", articles_path %> 
-| <%= link_to 'About', about_path %>
+<div class="container u-cf">
+  <h2 class="title">Categories</h2>
+  <section class="categories">
+    <div class="panel-content">
+      <div class="panel panel-default blue">
+        <div class="panel-body">
+          Development
+        </div>
+      </div>
+    </div>
+    <div class="panel-content">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          Software
+        </div>
+      </div>
+    </div>
+    <div class="panel-content">
+      <div class="panel panel-default blue">
+        <div class="panel-body">
+          Frameworks
+        </div>
+      </div>
+
+    </div>
+    <div class="panel-content">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          OOP
+        </div>
+      </div>
+
+    </div>
+    <div class="panel-content">
+      <div class="panel panel-default blue">
+        <div class="panel-body">
+          MVC
+        </div>
+      </div>
+
+    </div>
+    <div class="panel-content">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          Ruby
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- <section class="comments">
+    <h2 class="title"></h2>
+    <div class="content">
+      <div class="head">
+        <h3></h3>
+        <img src="" alt="" />
+      </div>
+      <div class="text">
+        <p></p>
+      </div>
+    </div>
+  </section> -->
+</div>
+
+

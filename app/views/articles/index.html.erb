@@ -1,20 +1,28 @@
-<h1>Listing all articles</h1>
-<p>
-  <%= link_to "New Article", new_article_path %>
-</p>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-  </tr>
-
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.description %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %> </td>
-      <td><%= link_to 'Show', article_path(article) %> </td>
-      <td><%= link_to 'Delete', article_path(article), method: :delete, data:{confirm: "Are you sure?"} %> </td>
-    </tr>
-  <% end %>
-</table>
+<div class="container">
+  <%= link_to "New Article", new_article_path, class: "btn btn-primary new" %>
+  <div class="newArticle">
+    <% @articles.each do |article| %>
+    <div class="row article">
+        <div class="thumbnail">
+          <div class="favorites">
+            <a href="#">
+              <i class="glyphicon glyphicon-star-empty"></i>
+            </a>
+          </div>
+          <h3><%= article.title %></h3>
+          <p><%= article.description %></p>
+          <div class="caption">
+            <div class="buttons">
+              <%= link_to 'Edit', edit_article_path(article) %>
+              <%= link_to 'Show', article_path(article) %>
+              
+                <%= link_to 'Delete', article_path(article), method: :delete,
+                data:{confirm: "Are you sure?"} %>
+              
+            </div>
+          </div>
+        </div>
+    </div>
+    <% end %>
+  </div>
+</div>
