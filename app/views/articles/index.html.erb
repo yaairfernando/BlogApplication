@@ -11,7 +11,7 @@
           </div>
           <span class="data-id"><%= article.id %></span>
           <h3><%= link_to article.title, article_path(article) %></h3>
-          <p><%= truncate(article.description, length: 200) %></p>
+          <p><%= truncate(article.description, length: 400) %></p>
           <div class="caption">
             <div class="buttons">
               <%= link_to 'Edit', edit_article_path(article) %>
