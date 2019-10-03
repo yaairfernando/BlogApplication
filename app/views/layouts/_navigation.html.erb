@@ -27,8 +27,21 @@
                     <li class="">
                       <%= link_to 'Log In', about_path, class: "page-scroll"  %>
                     </li>
-                    <li class="">
-                      <%= link_to 'Favorites', about_path, class: "page-scroll"  %>
+                    <li class="submenu">
+                      <a href="#" id="img-article">Favorites</a>
+                      <div id="articles">
+                        <table class="u-full-width" id="list-articles">
+                          <thead>
+                            <tr>
+                              <th>Title</th>
+                              <th>Description</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                        </table>
+                        <a href="#" id="clean-articles" class="u-full-width ground">Clean Articles</a>
+                      </div>
                     </li>
                    
                 </ul>
@@ -38,3 +51,9 @@
         <!-- /.container-fluid -->
     </nav>
 </div>
+
+<script>
+  new deleteArticle()
+  new cleanArticles()
+  new loadLocalStorage()
+</script>
