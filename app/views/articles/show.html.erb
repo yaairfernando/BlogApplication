@@ -9,7 +9,23 @@
         </div>
         <span class="data-id"><%= @article.id %></span>
         <h3><%= @article.title %></h3>
-        <%= simple_format(@article.description) %>
+        <% if @article.user %>
+          <ul class="listing">
+            <div class="row">
+              <div class="">
+                <li>Created by:</li>
+                <li><%= link_to gravatar_for(@article.user), user_path(@article.user) %></li>
+                <li class="article-title">
+                  <%= link_to@article.user.username, user_path(@article.user) %>
+                </li>
+                <li><small><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></small></li>
+              </div>
+            </div>
+          </ul>
+        <% end %>
+        <div class="center">
+          <%= simple_format(@article.description) %>
+        </div>
         <div class="caption">
             <div class="columnBtn">
                 <%= link_to 'Edit', edit_article_path(@article), class:"btn btn-primary ml20" %>

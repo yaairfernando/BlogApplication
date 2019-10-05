@@ -364,6 +364,34 @@ ul.navbar-right li:hover a{
 /* END
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+
+/* INDEX FOR USERS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.listing{
+  list-style: none;
+  padding-left: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+div.center >p{
+  text-align: center!important;
+}
+
+/* END
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* SHOW FOR USERS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.mt15{
+  margin-top: 15px;
+  text-align: center;
+}
+
+
+/* END
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 /* FOOTER
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .empty{
