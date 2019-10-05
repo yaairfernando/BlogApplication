@@ -1,5 +1,8 @@
 <div class="container">
-  <h2>All Bloggers</h2>
+  <h2 class="mt15">All Bloggers</h2>
+  <div align="center">
+    <%= will_paginate%>
+  </div>
   <% @users.each do |user| %>
     <ul class="listing">
       <div class="row">

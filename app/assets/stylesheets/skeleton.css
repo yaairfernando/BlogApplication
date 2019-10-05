@@ -387,6 +387,11 @@ div.center >p{
   margin-top: 15px;
   text-align: center;
 }
+.well{
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
 
 
 /* END
@@ -406,6 +411,7 @@ div.center >p{
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 3;
 }
 .footer .logo{
   text-align: center;
