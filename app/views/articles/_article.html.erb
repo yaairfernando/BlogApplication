@@ -1,0 +1,32 @@
+<% obj.each do |article| %>
+    <div class="row article" >
+        <div class="thumbnail">
+          <div class="favorites">
+            <a href="#" >
+              <i class="glyphicon glyphicon-star-empty fav"></i>
+            </a>
+          </div>
+          <span class="data-id"><%= article.id %></span>
+          <h3><%= link_to article.title, article_path(article) %></h3>
+          <p><%= truncate(article.description, length: 400) %></p>
+          <div class="article-details">
+            <small>
+              Created by: <%= article.user.username if article.user %>,
+              <%= time_ago_in_words(article.created_at) %> ago,
+              last updated: <%= time_ago_in_words(article.updated_at) %> ago
+            </small>
+          </div>
+
+          <div class="caption">
+            <div class="buttons">
+              <%= link_to 'Edit', edit_article_path(article) %>
+              <%= link_to 'Show', article_path(article) %>
+              
+                <%= link_to 'Delete', article_path(article), method: :delete,
+                data:{confirm: "Are you sure?"} %>
+              
+            </div>
+          </div>
+        </div>
+    </div>
+<% end %>

@@ -1,0 +1,11 @@
+<div class="container">
+  <h2>Welcome to <%= @user.username %>'s page </h2>
+  <div class="user-profile" align="center">
+    <%= gravatar_for @user, size: 150 %>
+  </div>
+  <h4 align="center"><%= @user.username %>'s articles</h4>
+  <div class="newArticle" id="cardArticle">
+    <%= render 'articles/article', obj: @user.articles %>
+  </div>
+</div>
+
