@@ -256,6 +256,12 @@ ul.navbar-right li:hover a{
 .favorites a:hover{
   color: #992337;
 }
+.article-details{
+  display: flex;
+  padding: 3px;
+  flex-direction: row-reverse;
+  border-top: 1px solid #eaeaea;
+}
 .thumbnail{
   border: solid 1px #ccc;
   background-color: #F7F8FA;
