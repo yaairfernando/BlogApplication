@@ -2,11 +2,16 @@
 <div class="container" id="cardArticle"> 
   <div class="row article show">
       <div class="thumbnail">
-        <div class="favorites">
-            <a href="#" >
-              <i class="glyphicon glyphicon-star-empty fav"></i>
-            </a>
-        </div>
+          <% @users.each do |user| %>
+          <% if current_user != @article.user && logged_in? %>
+            <div class="favorites">
+              <a href="#" >
+                <i class="glyphicon glyphicon-star-empty fav"></i>
+              </a>
+            </div>
+            <% break %>
+          <% end %>
+        <% end %>
         <span class="data-id"><%= @article.id %></span>
         <h3><%= @article.title %></h3>
         <% if @article.user %>

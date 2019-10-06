@@ -2,7 +2,7 @@
     <div class="row article" >
         <div class="thumbnail">
           <% @users.each do |user| %>
-            <% if current_user != article.user%>
+            <% if current_user != article.user && logged_in? %>
               <div class="favorites">
                 <a href="#" >
                   <i class="glyphicon glyphicon-star-empty fav"></i>

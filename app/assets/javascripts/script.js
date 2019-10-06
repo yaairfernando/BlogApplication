@@ -6,12 +6,12 @@ function deleteErrors(){
   if(errors){
     setTimeout(() => {
       errors.style.display = 'none';
-    }, 3000);
+    }, 6000);
   }
   if(msg){
     setTimeout(() => {
       msg.style.display = 'none';
-    }, 3000);
+    }, 4000);
   }
   
 }
