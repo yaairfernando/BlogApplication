@@ -22,6 +22,7 @@ function addArticle(){
     if(e.target.classList.contains('fav')){
       e.preventDefault();
       const article = e.target.parentElement.parentElement.parentElement;
+      // console.log(article);
       readArticle(article);
     }
   })
@@ -37,7 +38,7 @@ function readArticle(article){
 }
 
 function insertArticle(article){
-  const listArticles = document.getElementById('list-articles');
+  const listArticles = document.querySelector('#list-articles tbody');
   let row = document.createElement('tr');
   row.innerHTML = `
     <td> ${article.title} </td>
@@ -53,13 +54,14 @@ function insertArticle(article){
 function deleteArticle(){
   const listArticles = document.getElementById('list-articles');
   listArticles.addEventListener('click', (e)=>{
+    let article, articleID;
     if(e.target.classList.contains('delete-article')){
       e.preventDefault();
       e.target.parentElement.parentElement.remove();
-      const article = e.target.parentElement.parentElement;
-      const articleID = article.querySelector('a').getAttribute('data-id');
-      deleteLocalStorage(articleID);
+      article = e.target.parentElement.parentElement;
+      articleID = article.querySelector('a').getAttribute('data-id');
     }
+    deleteLocalStorage(articleID);
   })
 }
 
@@ -113,7 +115,7 @@ function deleteLocalStorage(articleID){
   let articles;
   articles = getArticlesLocalStorage();
   articles.forEach((article, index) =>{
-    if(articleID === article.id){
+    if(article.id === articleID){
       articles.splice(index, 1);
     }
   })

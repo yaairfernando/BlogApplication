@@ -9,10 +9,12 @@
   </div>
   <div class="newArticle" id="cardArticle">
     <%= render 'articles/article', obj: @user_articles %>
-    
   </div>
   <div align="center">
     <%= will_paginate @user_articles %>
   </div>
 </div>
 
+<script>
+    new addArticle();
+</script>

@@ -1,11 +1,16 @@
 <% obj.each do |article| %>
     <div class="row article" >
         <div class="thumbnail">
-          <div class="favorites">
-            <a href="#" >
-              <i class="glyphicon glyphicon-star-empty fav"></i>
-            </a>
-          </div>
+          <% @users.each do |user| %>
+            <% if current_user != article.user%>
+              <div class="favorites">
+                <a href="#" >
+                  <i class="glyphicon glyphicon-star-empty fav"></i>
+                </a>
+              </div>
+              <% break %>
+            <% end %>
+          <% end %>
           <span class="data-id"><%= article.id %></span>
           <h3><%= link_to article.title, article_path(article) %></h3>
           <p><%= truncate(article.description, length: 400) %></p>
@@ -18,14 +23,16 @@
           </div>
 
           <div class="caption">
-            <div class="buttons">
-              <%= link_to 'Edit', edit_article_path(article) %>
-              <%= link_to 'Show', article_path(article) %>
-              
-                <%= link_to 'Delete', article_path(article), method: :delete,
-                data:{confirm: "Are you sure?"} %>
-              
-            </div>
+            <% if logged_in? && current_user == article.user %>
+              <div class="buttons">
+                <%= link_to 'Edit', edit_article_path(article) %>
+                <%= link_to 'Show', article_path(article) %>
+                
+                  <%= link_to 'Delete', article_path(article), method: :delete,
+                  data:{confirm: "Are you sure?"} %>
+                
+              </div>
+            <% end %>
           </div>
         </div>
     </div>

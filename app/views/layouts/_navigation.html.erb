@@ -21,28 +21,55 @@
                     <li class="">
                       <%= link_to "Articles", articles_path, class: "page-scroll" %>
                     </li>
-                    <li class="">
+                    <!-- <li class="">
                       <%= link_to 'About', about_path, class: "page-scroll"  %>
-                    </li>
+                    </li> -->
                     <li class="">
-                      <%= link_to 'Log In', about_path, class: "page-scroll"  %>
+                      <%= link_to 'Users', users_path, class: "page-scroll"  %>
                     </li>
-                    <li class="submenu">
-                      <a href="#" id="img-article">Favorites</a>
-                      <div id="articles">
-                        <table class="u-full-width" id="list-articles">
-                          <thead>
-                            <tr>
-                              <th>Title</th>
-                              <th>Description</th>
-                              <th></th>
-                            </tr>
-                          </thead>
-                          <tbody></tbody>
-                        </table>
-                        <a href="#" id="clean-articles" class="u-full-width ground">Clean Articles</a>
-                      </div>
-                    </li>
+                    <% if logged_in? %>
+                      <li class="">
+                        <%= link_to 'Log Out', logout_path, method: :delete, class: "page-scroll"  %>
+                      </li>
+                      <li class="submenu">
+                        <a href="#" id="img-article">Favorites</a>
+                        <div id="articles">
+                          <table class="u-full-width" id="list-articles">
+                            <thead>
+                              <tr>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody></tbody>
+                          </table>
+                          <a href="#" id="clean-articles" class="u-full-width ground">Clean Articles</a>
+                        </div>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" 
+                          data-toggle="dropdown" 
+                          role="button" aria-haspopup="true" 
+                          aria-expanded="false">Your Profile 
+                          
+                        </a>
+                        <ul class="dropdown-menu dropProfile" id="displayProfile">
+                          <li><%= link_to "Edit profile", edit_user_path(current_user) %> </li>
+                          <li><%= link_to "View profile", user_path(current_user) %> </li>
+                          <li><a href="#">Something else here</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </li>
+                      <% else %>
+                      <li>
+                        <%= link_to 'Log in', login_path, class: "page-scroll"  %>
+                      </li>
+                      <li>
+                        <%= link_to 'Sign up', signup_path, class: "page-scroll"  %>
+                      </li>
+                    <%end%>
                    
                 </ul>
             </div>

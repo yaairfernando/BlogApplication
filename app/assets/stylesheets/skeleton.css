@@ -12,6 +12,12 @@
 h2{
   border-bottom: 1px solid #ccc;
 }
+h3{
+  font-weight: 400!important;
+}
+h3 a:hover{
+  text-decoration: none!important;
+}
 /* Table of contents
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 - Grid
@@ -57,11 +63,14 @@ ul.navbar-right li:hover a{
   color: #dde1e9!important;
 
 }
-.submenu{
+.submenu, .dropdown{
   position: relative;
 }
-.submenu #articles{
+.submenu #articles, .dropdown #displayProfile{
   display: none;
+}
+.dropdown a.dropdown-toggle{
+  border: 1px solid #888!important;
 }
 .submenu:hover #articles{
   display: block;
@@ -73,6 +82,19 @@ ul.navbar-right li:hover a{
   padding: 20px;
   min-height: 450px;
   min-width: 350px;
+  border-radius: 20 20;
+  border: 1px solid #ccc;
+}
+.dropdown:hover #displayProfile{
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 1;
+  background-color: white;
+  padding: 20px;
+  min-height: 350px;
+  min-width: 250px;
   border-radius: 20 20;
   border: 1px solid #ccc;
 }
@@ -89,6 +111,16 @@ ul.navbar-right li:hover a{
   text-decoration: none;
   color: white;
   font-weight: bold;
+}
+ul.navbar-right .dropProfile li a{
+  background-color: white!important;
+  color: #000428!important;
+}
+ul.navbar-right .dropProfile li a:hover{
+  background-color: #14171c!important;
+  color: #dde1e9!important;
+  display: block!important;
+  border-radius: 0px 0px 0px!important;
 }
 
 /* END
@@ -392,6 +424,21 @@ div.center >p{
   margin: 0 auto;
   margin-bottom: 30px;
 }
+
+
+/* END
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* SESSIONS NEW
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* .width50{
+  width: 50%;
+  margin: 0 auto;
+}
+@media (max-width: 850px){
+  .width50{
+    width: 90%;
+  }
+} */
 
 
 /* END
