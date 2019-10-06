@@ -450,6 +450,10 @@ div.center >p{
 .center small{
   color: #1EAEDB;
 }
+.center p{
+  margin-top: 0px;
+  padding: 0px;
+}
 
 /* END
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

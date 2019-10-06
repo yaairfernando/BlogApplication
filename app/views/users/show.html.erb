@@ -5,7 +5,10 @@
   </div>
   <div class="center">
     <h4 align="center"><%= @user.username %>'s articles</h4>
-    <small><strong><%= @user.email %></strong></small>
+  <small><strong><% if @user.admin? %> Admin Email: <% else %> Email: <% end %><%= @user.email %></strong></small>
+  <p>
+    <small><%= pluralize(@user.articles.count, "article") if @user.articles %></small>
+  </p>
   </div>
   <div align="center">
     <%= will_paginate @user_articles %>

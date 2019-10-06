@@ -51,15 +51,13 @@
                         <a href="#" class="dropdown-toggle" 
                           data-toggle="dropdown" 
                           role="button" aria-haspopup="true" 
-                          aria-expanded="false">Your Profile 
+                          aria-expanded="false">Your Profile <%= "Admin" if current_user.admin? %>
                           
                         </a>
                         <ul class="dropdown-menu dropProfile" id="displayProfile">
                           <li><%= link_to "Edit profile", edit_user_path(current_user) %> </li>
-                          <li><%= link_to "View profile", user_path(current_user) %> </li>
-                          <li><a href="#">Something else here</a></li>
                           <li role="separator" class="divider"></li>
-                          <li><a href="#">Separated link</a></li>
+                          <li><%= link_to "View profile", user_path(current_user) %> </li>
                         </ul>
                       </li>
                       <% else %>
