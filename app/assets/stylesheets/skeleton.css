@@ -132,7 +132,7 @@ ul.navbar-right .dropProfile li a:hover{
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 4;
   opacity: .9;
   width: 100%;
   margin-top: 5px;
@@ -441,7 +441,15 @@ div.center >p{
   margin: 0 auto;
   margin-bottom: 30px;
 }
-
+.center{
+  text-align: center;
+}
+.center h4{
+  margin-bottom: 0px;
+}
+.center small{
+  color: #1EAEDB;
+}
 
 /* END
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

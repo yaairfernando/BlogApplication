@@ -3,7 +3,10 @@
   <div class="user-profile" align="center">
     <%= gravatar_for @user, size: 150 %>
   </div>
-  <h4 align="center"><%= @user.username %>'s articles</h4>
+  <div class="center">
+    <h4 align="center"><%= @user.username %>'s articles</h4>
+    <small><strong><%= @user.email %></strong></small>
+  </div>
   <div align="center">
     <%= will_paginate @user_articles %>
   </div>
