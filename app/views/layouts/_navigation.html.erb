@@ -28,9 +28,9 @@
                       <%= link_to 'Users', users_path, class: "page-scroll"  %>
                     </li>
                     <% if logged_in? %>
-                      <li class="">
+                      <!-- <li class="">
                         <%= link_to 'Log Out', logout_path, method: :delete, class: "page-scroll"  %>
-                      </li>
+                      </li> -->
                       <li class="submenu">
                         <a href="#" id="img-article">Favorites</a>
                         <div id="articles">
@@ -51,13 +51,16 @@
                         <a href="#" class="dropdown-toggle" 
                           data-toggle="dropdown" 
                           role="button" aria-haspopup="true" 
-                          aria-expanded="false">Your Profile <%= "Admin" if current_user.admin? %>
+                          aria-expanded="false">Profile <%= "Admin" if current_user.admin? %>
                           
                         </a>
                         <ul class="dropdown-menu dropProfile" id="displayProfile">
                           <li><%= link_to "Edit profile", edit_user_path(current_user) %> </li>
-                          <li role="separator" class="divider"></li>
                           <li><%= link_to "View profile", user_path(current_user) %> </li>
+                          <li role="separator" class="divider"></li>
+                          <li class="">
+                            <%= link_to 'Log Out', logout_path, method: :delete, class: "page-scroll"  %>
+                          </li>
                         </ul>
                       </li>
                       <% else %>

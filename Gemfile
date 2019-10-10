@@ -9,6 +9,9 @@ gem 'rails', '~> 5.2.3'
 gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate', '3.1.7'
 gem 'bootstrap-will_paginate', '1.0.0'
+gem 'rails-controller-testing'
+# gem 'minitest', '5.10.3'
+# gem 'webdrivers', '~> 4.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -60,7 +63,9 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  # gem 'chromedriver-helper'
+  # gem 'webdrivers', '~> 4.0'
+  
 end
 
 group :production do
