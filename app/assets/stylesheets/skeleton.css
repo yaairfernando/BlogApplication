@@ -269,6 +269,13 @@ ul.navbar-right .dropProfile li a:hover{
 .panel-content .blue{
   background-color: #3498DB;
 }
+.panel-content a{
+  color: #000428;
+}
+.panel-content a:hover{
+  color: #000428;
+  text-decoration: none;
+}
 .panel-content .panel:hover{
   box-shadow: 0 0 2px 4px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
   cursor: pointer;
