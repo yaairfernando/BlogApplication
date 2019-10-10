@@ -1,0 +1,19 @@
+<div class="container">
+  <h4 align="center"><%= "Category: " + @category.name %></h4>
+    <% if logged_in? %>
+      <%= link_to "New Article", new_article_path, class: "btn btn-primary new" %>
+    <% end %>
+    <div align="center">
+      <%= will_paginate @category_articles %>
+    </div>
+    <div class="newArticle" id="cardArticle">
+      <%= render 'articles/article', obj: @category_articles %>
+    </div>
+    <div align="center">
+      <%= will_paginate @category_articles %>
+    </div>
+  </div>
+  
+  <!-- <script>
+    new addArticle();
+  </script> -->

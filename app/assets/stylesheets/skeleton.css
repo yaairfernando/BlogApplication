@@ -315,8 +315,11 @@ ul.navbar-right .dropProfile li a:hover{
 .article-details{
   display: flex;
   padding: 3px;
-  flex-direction: row-reverse;
+  flex-direction: column;
   border-top: 1px solid #eaeaea;
+}
+.article-details .mb5{
+  margin-bottom: 5px;
 }
 .thumbnail{
   border: solid 1px #ccc;
@@ -433,7 +436,15 @@ ul.navbar-right .dropProfile li a:hover{
 div.center >p{
   text-align: center!important;
 }
-
+.badge{
+  background-color: #CEF6F5;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+.input_checkbox input{
+  width: auto !important;
+}
 /* END
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 

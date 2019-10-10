@@ -20,7 +20,9 @@ class CategoriesController < ApplicationController
   end
 
   def show
-
+    @users = User.all
+    @category = Category.find(params[:id])
+    @category_articles = @category.articles.paginate(page: params[:page], per_page: 5).order('created_at DESC')
   end
 
   private

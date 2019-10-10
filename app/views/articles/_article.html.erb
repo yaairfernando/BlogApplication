@@ -15,11 +15,14 @@
           <h3><%= link_to article.title, article_path(article) %></h3>
           <p><%= truncate(article.description, length: 400) %></p>
           <div class="article-details">
-            <small>
+            <small class="mb5">
               Created by: <%= article.user.username if article.user %>,
               <%= time_ago_in_words(article.created_at) %> ago,
               last updated: <%= time_ago_in_words(article.updated_at) %> ago
             </small>
+            <% if article.categories.any? %>
+            <small>Categories: <%= render article.categories %></small>
+            <% end %>
           </div>
 
           <div class="caption">

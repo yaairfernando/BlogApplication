@@ -30,6 +30,9 @@
         <% end %>
         <div class="center">
           <%= simple_format(@article.description) %>
+          <% if @article.categories.any? %>
+            <small>Categories: <%= render @article.categories %></small>
+          <% end %>
         </div>
         <div class="caption">
             <div class="columnBtn">
