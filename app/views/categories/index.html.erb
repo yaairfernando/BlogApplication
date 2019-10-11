@@ -1,23 +1,28 @@
-<h2>Listing all Categories</h2>
 <div class="container">
-  <div align="center">
-    <%= will_paginate %>
-  </div>
-  <% @categories.each do |category| %>
-    <ul class="listing">
-      <div class="row">
-        <div class="wel">
-          <li class="article_title">
-            <%= link_to "#{category.name}", category_path(category) %>
-          </li>
-          <li>
-            <small><%= pluralize(category.articles.count, "article") %> </small>
-          </li>
+  <h2 class="center mt15">Listing all Categories</h2>
+  <div class="form">
+    <% if logged_in? and current_user.admin? %>
+      <%= link_to "New Category", new_category_path, class: "btn btn-primary new" %>
+    <% end %>
+    <div align="center">
+      <%= will_paginate %>
+    </div>
+    <% @categories.each do |category| %>
+      <ul class="listing">
+        <div class="category_list">
+          <div class="well">
+            <li class="article_title">
+              <%= link_to "#{category.name}", category_path(category) %>
+            </li>
+            <li>
+              <small><%= pluralize(category.articles.count, "article") %> </small>
+            </li>
+          </div>
         </div>
-      </div>
-    </ul>
-  <% end %>
-  <div align="center">
-    <%= will_paginate %>
+      </ul>
+    <% end %>
+    <div align="center">
+      <%= will_paginate %>
+    </div>
   </div>
 </div>
