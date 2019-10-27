@@ -1,6 +1,6 @@
 <div class="navigation">
     <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
-        <div class="container">
+        <div class="navegacion">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -32,7 +32,7 @@
                         <%= link_to 'Log Out', logout_path, method: :delete, class: "page-scroll"  %>
                       </li> -->
                       <li class="submenu">
-                        <a href="#" id="img-article">Favorites</a>
+                        <a href="#" id="img-article" class="page-scroll">Favorites</a>
                         <div id="articles">
                           <table class="u-full-width" id="list-articles">
                             <thead>
@@ -48,7 +48,7 @@
                         </div>
                       </li>
                       <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" 
+                          <a href="#" class="dropdown-toggle page-scroll" 
                             data-toggle="dropdown" 
                             role="button" aria-haspopup="true" 
                             aria-expanded="false">Categories
@@ -65,7 +65,7 @@
                           </ul>
                         </li>
                       <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" 
+                        <a href="#" class="dropdown-toggle page-scroll" 
                           data-toggle="dropdown" 
                           role="button" aria-haspopup="true" 
                           aria-expanded="false">Profile <%= "Admin" if current_user.admin? %>
