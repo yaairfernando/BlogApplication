@@ -1,0 +1,23 @@
+
+
+<div class="row">
+    <div class="col-xs-2 col-md-1">
+        <%= gravatar_for comment.user, size: 150, class: "img-circle img-responsive" %>
+    </div>
+    <div class="col-xs-10 col-md-11">
+      <div>
+        <div class="mic-info">
+            By: <%= link_to comment.user.username %> |  <%= time_ago_in_words(comment.created_at()) %>
+        </div>
+      </div>
+      <div class="comment-text">
+        <strong><%= comment.comment %></strong></span>
+      </div>
+      <div class="action">
+        <% if logged_in? and current_user === comment.user %>
+        <span class="glyphicon glyphicon-trash"></span>
+        <%= link_to "Delete", [comment.article, comment], method: :delete, data: { confirm: "Are you sure?"}  %>  
+        <% end %>
+      </div>
+    </div>
+  </div>

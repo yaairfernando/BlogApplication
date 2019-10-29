@@ -423,27 +423,27 @@ form .backList {
 
 .fields i.fa-user-circle {
   position: absolute;
-  top: 50.7%;
+  top: 48.9%;
 }
 
 .fields i.fa-envelope-o {
   position: absolute;
-  top: 61.7%;
+  top: 60.7%;
 }
 
 .fields i.fa-envelope-o[rel="email"] {
   position: absolute;
-  top: 57.4%;
+  top: 55.4%;
 }
 
 .fields i.fa-lock {
   position: absolute;
-  top: 72.9%;
+  top: 72.3%;
 }
 
 .fields i.fa-lock[rel="pass"] {
   position: absolute;
-  top: 70.1%;
+  top: 69.0%;
 }
 
 /* END */
