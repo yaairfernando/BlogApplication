@@ -6,13 +6,20 @@
   <div class="users">
     <% @users.each do |user| %>
       <ul class="listing">
-        <div class="row">
+        <div class="">
           <div class="well">
             <li><%= link_to gravatar_for(user), user_path(user)%></li>
             <li class="article-title">
               <%= link_to user.username, user_path(user) %>
             </li>
-            <li><small><%= pluralize(user.articles.count, "article") if user.articles %></small></li>
+            <li class="count"><small><%= pluralize(user.articles.count, "article") if user.articles %></small></li>
+            <% user.articles.each do |article| %>
+              <ul class="articles">
+                <li>
+                  <%= article.title %>
+                </li>
+              </ul>
+            <% end %>
             <% if logged_in? and current_user.admin? %>
               <li><%= link_to "Delete", user_path(user), method: :delete, 
               data: { confirm: "Are you sure you want to delete the user and all their articles?"} %></li>
