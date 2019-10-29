@@ -8,18 +8,12 @@
       <%= will_paginate %>
     </div>
     <% @categories.each do |category| %>
-      <ul class="listing">
-        <div class="category_list">
-          <div class="well">
-            <li class="article_title">
-              <%= link_to "#{category.name}", category_path(category) %>
-            </li>
-            <li>
-              <small><%= pluralize(category.articles.count, "article") %> </small>
-            </li>
-          </div>
+      <div class="category">
+        <div class="content">
+          <p><%= link_to "#{category.name}", category_path(category) %></p>
+          <small><%= pluralize(category.articles.count, "article") %> </small>
         </div>
-      </ul>
+      </div>
     <% end %>
     <div align="center">
       <%= will_paginate %>

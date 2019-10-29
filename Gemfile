@@ -15,7 +15,8 @@ gem 'rails-controller-testing'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
-gem 'bootstrap-sass', '~> 3.3.7'
+# gem 'bootstrap-sass', '~> 3.3.7'
+gem "bootstrap-sass", ">= 3.4.1"
 gem 'jquery-rails'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -56,6 +57,12 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  #better_errors
+  gem 'better_errors', '~> 2.5', '>= 2.5.1'
+  #guard
+  gem 'guard', '~> 2.15', '>= 2.15.1'
+  #livereload
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
 end
 
 group :test do

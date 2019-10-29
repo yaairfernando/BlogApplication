@@ -15,15 +15,16 @@
         <span class="data-id"><%= @article.id %></span>
         <h3><%= @article.title %></h3>
         <% if @article.user %>
-          <ul class="listing">
-            <div class="row">
-              <div class="">
-                <li>Created by:</li>
-                <li><%= link_to gravatar_for(@article.user), user_path(@article.user) %></li>
-                <li class="article-title">
+          <ul class="">
+            <div class="colum">
+              <div class="right">
+                <p><%= link_to gravatar_for(@article.user), user_path(@article.user) %></p>
+                <p class="article-title">
+                </p>
+              </div>
+              <div class="left">
                   <%= link_to@article.user.username, user_path(@article.user) %>
-                </li>
-                <li><small><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></small></li>
+                  <p><small><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></small></p>
               </div>
             </div>
           </ul>

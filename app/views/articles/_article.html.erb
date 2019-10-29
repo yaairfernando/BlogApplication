@@ -12,17 +12,22 @@
             <% end %>
           <% end %>
           <span class="data-id"><%= article.id %></span>
+          <% if article.categories.any? %>
+            <small><%= render article.categories %></small>
+          <% end %>
           <h3><%= link_to article.title, article_path(article) %></h3>
           <p><%= truncate(article.description, length: 400) %></p>
           <div class="article-details">
             <small class="mb5">
-              Created by: <%= article.user.username if article.user %>,
-              <%= time_ago_in_words(article.created_at) %> ago,
-              last updated: <%= time_ago_in_words(article.updated_at) %> ago
+              BY: <%= article.user.username.upcase if article.user %> |
             </small>
-            <% if article.categories.any? %>
-            <small>Categories: <%= render article.categories %></small>
-            <% end %>
+            <small class="grey">
+                <%= time_ago_in_words(article.created_at).upcase %> AGO,
+            </small>
+            <small class="grey">
+                UPDATED: <%= time_ago_in_words(article.updated_at).upcase %> AGO
+            </small>
+            
           </div>
 
           <div class="caption">

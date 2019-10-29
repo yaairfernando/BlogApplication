@@ -1,5 +1,4 @@
 console.log("hello");
-
 function deleteErrors(){
   const errors = document.getElementById('errors_messages');
   const msg = document.getElementById('msg');
@@ -126,8 +125,6 @@ function deleteLocalStorage(articleID){
 function cleanLocalStorage(){
   localStorage.clear();
 }
-
-
 
 
 
