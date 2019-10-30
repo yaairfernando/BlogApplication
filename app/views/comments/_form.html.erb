@@ -6,9 +6,5 @@
         label_html: { class: 'label'} %>
       <small id="emailHelp" class="form-text text-muted">Share your thoughts.</small>
       </div>
-      <% if logged_in? %>
-        <%= f.button :submit, class:"" %>
-      <% else %>
-        <%= link_to "Create a comment", login_path, class:"button" %>
-      <% end %>
+      <%= f.button :submit, class:"" %>
 <% end %>

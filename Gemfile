@@ -46,6 +46,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 #Simple Form
 gem 'simple_form', '~> 5.0', '>= 5.0.1'
+# Better table display
+gem 'hirb'
 
 group :development, :test do
   gem 'sqlite3'

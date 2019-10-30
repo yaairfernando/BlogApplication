@@ -14,7 +14,7 @@
         <strong><%= comment.comment %></strong></span>
       </div>
       <div class="action">
-        <% if logged_in? and current_user === comment.user %>
+        <% if logged_in? and current_user.id === comment.user_id %>
         <span class="glyphicon glyphicon-trash"></span>
         <%= link_to "Delete", [comment.article, comment], method: :delete, data: { confirm: "Are you sure?"}  %>  
         <% end %>

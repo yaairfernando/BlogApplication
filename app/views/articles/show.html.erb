@@ -61,7 +61,12 @@
               </ul>
               <div class="container">
                 <h3>Leave a reply</h3>
-                <%= render 'comments/form' %>
+                <% if logged_in? %>
+                  <%= render 'comments/form' %>
+                <% else %>
+                  <small id="emailHelp" class="form-text text-muted">Log in to leave a comment.</small>
+                  <%= link_to 'Sign in', login_path, class: "btn btn-primary w100" %>
+                <% end %>
               </div>
                 <!-- <a href="#" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon glyphicon-refresh"></span> More</a> -->
             </div>
