@@ -66,7 +66,7 @@ Project Link: [https://github.com/YairFernando67/BlogApplication](https://github
 - [Gravatar Image Tag](https://github.com/mdeering/gravatar_image_tag) - It is helpful to use user's gravatar based on their emails
 - [Better Errors](https://github.com/charliesome/better_errors) - Give you a better display of the errors. 
 - [Bcrypt](https://github.com/codahale/bcrypt-ruby) - The bcrypt Ruby gem provides a simple wrapper for safely handling passwords.
-- [will_paginate](https://github.com/mislav/will_paginate) - ill_paginate provides a simple API for performing paginated queries with Active Record
+- [will_paginate](https://github.com/mislav/will_paginate) - will_paginate provides a simple API for performing paginated queries with Active Record
 - [bootstrap-will_paginate](https://github.com/yrgoldteeth/bootstrap-will_paginate) - Hooks into will_paginate to format the html to match Twitter Bootstrap styling
-
-
+- [hirb](http://tagaholic.me/hirb/doc/) - It desplays a better view of the database
+- [Impressionist](https://github.com/charlotte-ruby/impressionist) - To count views
