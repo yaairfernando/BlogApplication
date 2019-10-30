@@ -6,6 +6,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.paginate(page: params[:page], per_page: 6).order('created_at DESC')
     @users = User.all
+    # @comment = Comment.find(:id)
     # @user = User.where(current_user != @article.user).take!
   end
 

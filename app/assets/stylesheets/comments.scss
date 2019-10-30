@@ -1,0 +1,23 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.img-circle {
+  width: 40px;
+}
+
+.row {
+  margin-bottom: 10px;
+}
+
+.row .col-md-1 {
+  margin-top: 15px;
+}
+
+.row .col-md-11 {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin-right: 5px;
+  padding: 10px;
+  width: 90%;
+}

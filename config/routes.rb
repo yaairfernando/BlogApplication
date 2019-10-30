@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'about', to: 'pages#about'
 
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
 
   get 'signup', to: 'users#new'
   # post 'users', to: 'users#create'

@@ -1,0 +1,10 @@
+<%= render 'shared/errors', obj: @article.comments.build %>
+<%= simple_form_for([@article, @article.comments.build]) do |f| %>
+      <div class="form-group">
+        <%= f.hidden_field :user_id %>
+        <%= f.input :comment, input_html: { class: 'form-control'}, wrapper: false,
+        label_html: { class: 'label'} %>
+      <small id="emailHelp" class="form-text text-muted">Share your thoughts.</small>
+      </div>
+      <%= f.button :submit, class:"" %>
+<% end %>

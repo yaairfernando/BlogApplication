@@ -106,6 +106,7 @@ GEM
       guard (~> 2.8)
       guard-compat (~> 1.0)
       multi_json (~> 1.8)
+    hirb (0.7.3)
     http_parser.rb (0.6.0)
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
@@ -202,6 +203,9 @@ GEM
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
     shellany (0.0.1)
+    simple_form (5.0.1)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -250,6 +254,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   guard (~> 2.15, >= 2.15.1)
   guard-livereload (~> 2.5, >= 2.5.2)
+  hirb
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
@@ -259,6 +264,7 @@ DEPENDENCIES
   rails-controller-testing
   sass-rails (~> 5.0)
   selenium-webdriver
+  simple_form (~> 5.0, >= 5.0.1)
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3

@@ -19,13 +19,18 @@
           <p><%= truncate(article.description, length: 400) %></p>
           <div class="article-details">
             <small class="mb5">
-              BY: <%= article.user.username.upcase if article.user %> |
+              BY: <%= link_to article.user.username.upcase, user_path(article.user) %> |
+              <!-- <%= article.user.username.upcase if article.user %> | -->
             </small>
             <small class="grey">
-                <%= time_ago_in_words(article.created_at).upcase %> AGO,
+              <%= time_ago_in_words(article.created_at).upcase %> AGO,
             </small>
             <small class="grey">
-                UPDATED: <%= time_ago_in_words(article.updated_at).upcase %> AGO
+              UPDATED: <%= time_ago_in_words(article.updated_at).upcase %> AGO
+            </small> |
+            <small class="grey">
+               <%= link_to article.comments.count, article_path(article)  %>
+              <span class="glyphicon glyphicon-comment"></span>
             </small>
             
           </div>
