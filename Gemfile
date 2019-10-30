@@ -48,6 +48,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'simple_form', '~> 5.0', '>= 5.0.1'
 # Better table display
 gem 'hirb'
+# Counting views
+gem 'impressionist', '~> 1.6'
 
 group :development, :test do
   gem 'sqlite3'
