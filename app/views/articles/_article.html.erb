@@ -31,8 +31,11 @@
             <small class="grey">
                <%= link_to article.comments.count, article_path(article)  %>
               <span class="glyphicon glyphicon-comment"></span>
-            </small>
-            
+            </small> |
+            <small class="grey">
+                <%= article.impressionist_count  %>
+               <span class="glyphicon glyphicon-eye-open"></span>
+             </small>
           </div>
 
           <div class="caption">
