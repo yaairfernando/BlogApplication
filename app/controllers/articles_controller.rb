@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
   before_action :require_user, except: [:index, :show]
   before_action :require_same_user, only: [:edit, :update, :destroy]
   impressionist actions: [:show], unique: [:impressionable_type, :impressionable_id, :session_hash]
+  
   def index
     @articles = Article.paginate(page: params[:page], per_page: 6).order('created_at DESC')
     @users = User.all
