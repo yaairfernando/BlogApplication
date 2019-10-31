@@ -50,7 +50,8 @@
                 <span class="glyphicon glyphicon-comment"></span>
                 <h3 class="panel-title">Recent Comments</h3>
                 <span class="label label-info">
-                  <strong><%= @article.comments.count %></strong>
+                  <strong><%= @article.comments.count %></strong> |
+                  <strong><%= pluralize( @article.impressionist_count ,'View') %></strong>
                 </span>
             </div>
             <div class="panel-body">

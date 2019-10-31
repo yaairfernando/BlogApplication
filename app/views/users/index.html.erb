@@ -16,7 +16,7 @@
             <% user.articles.each do |article| %>
               <ul class="articles">
                 <li>
-                  <%= article.title %>
+                  <%= link_to article.title, article_path(article) %>
                 </li>
               </ul>
             <% end %>
