@@ -2,7 +2,7 @@
 <div class="container" id="cardArticle"> 
   <div class="row article show">
       <div class="thumbnail">
-          <% @users.each do |user| %>
+          <!-- <% @users.each do |user| %>
           <% if current_user != @article.user && logged_in? %>
             <div class="favorites">
               <a href="#" >
@@ -11,9 +11,31 @@
             </div>
             <% break %>
           <% end %>
-        <% end %>
+        <% end %> -->
         <span class="data-id"><%= @article.id %></span>
-        <h3><%= @article.title %></h3>
+        <div class="is-two">
+          <h3><%= @article.title %></h3>
+          <div class="likes">
+            <% if logged_in? %>
+              <% if current_user.liked? @article %>
+                <%= link_to unlike_article_path(@article), method: :put, class: "unlike_shot" do %>
+                  <span class="icon"><i class="fa fa-heart has-text-primary"></i></span>
+                  <span class="vote_count"><%= pluralize(@article.get_likes.size, 'Like') %></span>
+                <% end %>
+              <% else %>
+                <%= link_to like_article_path(@article), method: :put, class: "like_shot" do %>
+                  <span class="icon"><i class="fa fa-heart"></i></span>
+                  <span class="vote_count"><%= pluralize(@article.get_likes.size, 'Like') %></span>
+                <% end %>
+              <% end %>
+            <% else %> 
+              <%= link_to login_path, class: "like_shot" do %>
+                <span class="icon"><i class="fa fa-heart"></i></span>
+                <span class="vote_count"><%= pluralize(@article.get_likes.size, 'Like') %></span>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
         <% if @article.user %>
           <ul class="">
             <div class="colum">
@@ -77,5 +99,5 @@
 </div>
 
 <script>
-    new addArticle();
+    // new addArticle();
   </script>

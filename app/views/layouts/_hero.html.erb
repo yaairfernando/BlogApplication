@@ -1,0 +1,8 @@
+<% if !logged_in? %>
+<div class="alert alert-info alert-login" role="alert">
+  <p>
+    What are you working on? <span class="">Dribble is where designers get inspired and hired.!!!</span>
+  </p>  
+    <%= link_to "Login", login_path, class: "" %> 
+</div>
+<% end %>

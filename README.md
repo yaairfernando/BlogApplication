@@ -70,3 +70,4 @@ Project Link: [https://github.com/YairFernando67/BlogApplication](https://github
 - [bootstrap-will_paginate](https://github.com/yrgoldteeth/bootstrap-will_paginate) - Hooks into will_paginate to format the html to match Twitter Bootstrap styling
 - [hirb](http://tagaholic.me/hirb/doc/) - It desplays a better view of the database
 - [Impressionist](https://github.com/charlotte-ruby/impressionist) - To count views
+- [Acts As Votable](https://github.com/ryanto/acts_as_votable) - Like and unlike articles
