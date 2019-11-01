@@ -32,6 +32,25 @@ small.likes a:hover {
   display: flex;
   justify-content: space-between;
 }
+
+.alert-login {
+  opacity: .9;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -9.9%;
+    z-index: 12;
+    left: 25%;
+}
+
+.alert-login span {
+  font-weight: 600;
+}
+
+.alert-login a {
+  margin-left: 15px;
+  font-weight: 800;
+}
 a.page-scroll {
   font-family: 'Staatliches', cursive;
 }
@@ -77,6 +96,7 @@ h3 a {
 
 .navigation nav {
   background: #14171c;
+  z-index: 4;
 }
 
 .navbar-header a{
