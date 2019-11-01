@@ -50,6 +50,8 @@ gem 'simple_form', '~> 5.0', '>= 5.0.1'
 gem 'hirb'
 # Counting views
 gem 'impressionist', '~> 1.6'
+# Acts as votable
+gem 'acts_as_votable', '~> 0.11.1'
 
 group :development, :test do
   gem 'sqlite3'

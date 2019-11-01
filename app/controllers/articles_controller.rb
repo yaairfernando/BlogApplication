@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:edit, :update, :show, :destroy]
-  before_action :require_user, except: [:index, :show]
+  before_action :set_article, only: [:edit, :update, :show, :destroy, :like, :unlike]
+  before_action :require_user, except: [:index, :show, :like, :unlike]
   before_action :require_same_user, only: [:edit, :update, :destroy]
   impressionist actions: [:show], unique: [:impressionable_type, :impressionable_id, :session_hash]
   
@@ -50,6 +50,22 @@ class ArticlesController < ApplicationController
     @article.destroy
     flash[:danger] = "Article was successfully deleted"
     redirect_to articles_path
+  end
+
+  def like
+    @article.liked_by current_user
+    respond_to do |format|
+      format.html { redirect_back fallback_location: root_path}
+      format.js { render layout:false}
+    end
+  end
+
+  def unlike
+    @article.unliked_by current_user
+    respond_to do |format|
+      format.html { redirect_back fallback_location: root_path}
+      format.js { render layout:false}
+    end
   end
 
 

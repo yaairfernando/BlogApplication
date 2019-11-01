@@ -16,6 +16,22 @@ body {
   background: #E9EBEE;
 }
 
+.has-text-primary {
+  color: #992337;
+}
+.is-two {
+  display: flex;
+  justify-content: space-between;
+}
+
+.is-two .likes a:hover,
+small.likes a:hover {
+  text-decoration: none;
+}
+.article-details {
+  display: flex;
+  justify-content: space-between;
+}
 a.page-scroll {
   font-family: 'Staatliches', cursive;
 }

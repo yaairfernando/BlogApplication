@@ -18,24 +18,48 @@
           <h3><%= link_to article.title, article_path(article) %></h3>
           <p><%= truncate(article.description, length: 400) %></p>
           <div class="article-details">
-            <small class="mb5">
-              BY: <%= link_to article.user.username.upcase, user_path(article.user) %> |
-              <!-- <%= article.user.username.upcase if article.user %> | -->
-            </small>
-            <small class="grey">
-              <%= time_ago_in_words(article.created_at).upcase %> AGO,
-            </small>
-            <small class="grey">
-              UPDATED: <%= time_ago_in_words(article.updated_at).upcase %> AGO
-            </small> |
-            <small class="grey">
-               <%= link_to article.comments.count, article_path(article)  %>
-              <span class="glyphicon glyphicon-comment"></span>
-            </small> |
-            <small class="grey">
-                <%= article.impressionist_count  %>
-               <span class="glyphicon glyphicon-eye-open"></span>
-             </small>
+            <div class="main">
+              <small class="mb5">
+                BY: <%= link_to article.user.username.upcase, user_path(article.user) %> |
+                <!-- <%= article.user.username.upcase if article.user %> | -->
+              </small>
+              <small class="grey">
+                <%= time_ago_in_words(article.created_at).upcase %> AGO,
+              </small>
+              <small class="grey">
+                UPDATED: <%= time_ago_in_words(article.updated_at).upcase %> AGO
+              </small> |
+              <small class="grey">
+                 <%= link_to article.comments.count, article_path(article)  %>
+                <span class="glyphicon glyphicon-comment"></span>
+              </small> |
+              <small class="grey">
+                  <%= article.impressionist_count  %>
+                 <span class="glyphicon glyphicon-eye-open"></span>
+               </small>
+            </div>
+            <div class="likes">
+              <small class="likes">
+                <% if logged_in? %>
+                <% if current_user.liked? article %>
+                  <%= link_to unlike_article_path(article), method: :put, class: "unlike_shot" do %>
+                    <span class="icon"><i class="fa fa-heart has-text-primary"></i></span>
+                    <span class="vote_count"><%= article.get_likes.size %></span>
+                  <% end %>
+                <% else %>
+                  <%= link_to like_article_path(article), method: :put, class: "like_shot" do %>
+                    <span class="icon"><i class="fa fa-heart"></i></span>
+                    <span class="vote_count"><%= article.get_likes.size %></span>
+                  <% end %>
+                  <% end %>
+                <% else %> 
+                  <%= link_to login_path, class: "like_shot" do %>
+                    <span class="icon"><i class="fa fa-heart"></i></span>
+                    <span class="vote_count"><%= article.get_likes.size %></span>
+                  <% end %>
+                <% end %>
+              </small>
+            </div>
           </div>
 
           <div class="caption">
