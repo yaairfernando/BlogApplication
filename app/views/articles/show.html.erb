@@ -2,7 +2,7 @@
 <div class="container" id="cardArticle"> 
   <div class="row article show">
       <div class="thumbnail">
-          <% @users.each do |user| %>
+          <!-- <% @users.each do |user| %>
           <% if current_user != @article.user && logged_in? %>
             <div class="favorites">
               <a href="#" >
@@ -11,7 +11,7 @@
             </div>
             <% break %>
           <% end %>
-        <% end %>
+        <% end %> -->
         <span class="data-id"><%= @article.id %></span>
         <div class="is-two">
           <h3><%= @article.title %></h3>
@@ -99,5 +99,5 @@
 </div>
 
 <script>
-    new addArticle();
+    // new addArticle();
   </script>
