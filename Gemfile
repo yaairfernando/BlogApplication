@@ -52,6 +52,8 @@ gem 'hirb'
 gem 'impressionist', '~> 1.6'
 # Acts as votable
 gem 'acts_as_votable', '~> 0.11.1'
+#Updating this gem
+gem "loofah", ">= 2.3.1"
 
 group :development, :test do
   gem 'sqlite3'
