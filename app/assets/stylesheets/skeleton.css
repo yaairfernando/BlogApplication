@@ -160,6 +160,10 @@ ul.navbar-right li:hover a{
    display: flex;
    justify-content: center; 
  }
+ 
+ ul.navbar-right a {
+   font-size: 16px;
+ }
 }
 
 .submenu, .dropdown{
