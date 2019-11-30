@@ -33,6 +33,10 @@ small.likes a:hover {
   justify-content: space-between;
 }
 
+.cont-rel {
+  position: relative!important;
+}
+
 .alert-login {
   opacity: .9;
     display: flex;
@@ -164,6 +168,17 @@ ul.navbar-right li:hover a{
  ul.navbar-right a {
    font-size: 16px;
  }
+
+ .alert-login {
+  opacity: .9;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 104.1%;
+  height: 50px;
+  z-index: 12;
+  left: 5%;
+  }
 }
 
 .submenu, .dropdown{
