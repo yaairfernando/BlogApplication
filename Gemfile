@@ -13,7 +13,7 @@ gem 'rails-controller-testing'
 # gem 'minitest', '5.10.3'
 # gem 'webdrivers', '~> 4.0'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 # Use SCSS for stylesheets
 # gem 'bootstrap-sass', '~> 3.3.7'
 gem "bootstrap-sass", ">= 3.4.1"
